@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -35,6 +35,168 @@ a {
   text-decoration: none;
 }
 
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+} */
+
+
+
+/* متغیرهای CSS برای تم روشن (Light Mode) */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --secondary: #6b7280;
+  --secondary-hover: #4b5563;
+  --border: #e5e7eb;
+  --border-dark: #d1d5db;
+  --success: #10b981;
+  --error: #ef4444;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* متغیرهای CSS برای تم تاریک (Dark Mode) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --primary: #3b82f6;
+    --primary-hover: #2563eb;
+    --secondary: #9ca3af;
+    --secondary-hover: #6b7280;
+    --border: #374151;
+    --border-dark: #1f2937;
+    --success: #10b981;
+    --error: #ef4444;
+    --shadow: 0 1px 3px rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* استایل‌های پایه‌ای برای html و body */
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  scroll-behavior: smooth; /* اسکرول نرم */
+}
+
+/* استایل‌های body */
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+}
+
+/* استایل‌های عمومی (*) */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* استایل‌های لینک (a) */
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--primary-hover);
+}
+
+/* استایل‌های دکمه (button) */
+button {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--primary-hover);
+}
+
+/* استایل‌های input و textarea */
+input,
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 0.25rem;
+  background-color: var(--background);
+  color: var(--foreground);
+  transition: border-color 0.2s ease;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+/* استایل‌های جداول (table) */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+th,
+td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+th {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+/* استایل‌های کارت (card) */
+.card {
+  background-color: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: var(--shadow);
+}
+
+/* استایل‌های utility */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+/* تم تاریک برای html */
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
